@@ -1,0 +1,42 @@
+#myCanvas {
+    border: 10px ridge black;
+}
+
+.body_background {
+    background-image: url("Back.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#btn_div {
+    color:darkorange;
+    font-size: 24px;
+}
+
+button {
+    font-size: 22px;
+    background-color: crimson;
+}
+
+h1 {
+    color:darkorange;
+    font-size: 42px;
+    background-color: white;
+    width: 300px;
+}
+
+h3 {
+    background-color: white;
+    width: 300px;
+}
+
+#span_div {
+    font-size: 24px;
+    color:darkred;
+}
+
+P {
+    font-size: 20px;
+    background-color: white;
+    width: 300px;
+}
