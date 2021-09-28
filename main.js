@@ -63,8 +63,8 @@ function my_keydown(e)
 
     if ((px == 1020)&&(py == 500))
     {
+        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
-        document.getElementById("heading").style.borderColor = "red";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
     }
@@ -98,8 +98,8 @@ function left()
     } 
     if ((px == 1020)&&(py == 500))
     {
+        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
-        document.getElementById("heading").style.borderColor = "red";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
     }
@@ -115,8 +115,8 @@ function right()
     }
     if ((px == 1020)&&(py == 500))
     {
+        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
-        document.getElementById("heading").style.borderColor = "red";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
     }
@@ -132,8 +132,8 @@ function up()
     }
     if ((px == 1020)&&(py == 500))
     {
+        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
-        document.getElementById("heading").style.borderColor = "red";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
     }
@@ -149,20 +149,19 @@ function down()
     }
     if ((px == 1020)&&(py == 500))
     {
+        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
-        document.getElementById("heading").style.borderColor = "red";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
     }
 }
 
-function reset()
+function creset()
 {
     px = 700;
     py = 390;
     document.getElementById("xv").innerHTML = "";
     document.getElementById("yv").innerHTML = "";
-    canvas.remove(person_obj);
     document.getElementById("btn_div").style.display = "inline";
     
     document.getElementById("heading").innerHTML = "Reach Home";
