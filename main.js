@@ -5,6 +5,20 @@ var px = 700;
 var py = 390;
 var player = "";
 
+function boy()
+{
+    player = "Boy.jpg";
+    person(player);
+    document.getElementById("btn_div").style.display = "none";
+}
+
+function girl()
+{
+    player = "Girl.jpg";
+    person(player);
+    document.getElementById("btn_div").style.display = "none";
+}
+
 function back_load()
 {
    
@@ -20,7 +34,7 @@ function back_load()
 
         canvas.add(town_obj);
     })
-    person(get_img);
+    //person(get_img);
 }
 
 function person(get_img)
@@ -41,19 +55,7 @@ function person(get_img)
     document.getElementById("yv").innerHTML = py;
 }
 
-function boy()
-{
-    player = "Boy.jpg"
-    person(player);
-    document.getElementById("btn_div").style.display = "none";
-}
 
-function girl()
-{
-    player = "Girl.jpg"
-    person(player);
-    document.getElementById("btn_div").style.display = "none";
-}
 
 window.addEventListener("keydown", my_keydown);
 function my_keydown(e)
@@ -61,12 +63,12 @@ function my_keydown(e)
     keypressed = e.keyCode;
     console.log(keypressed);
 
-    if ((px == 1020)&&(py == 500))
+    if ((px >= 1020)&&(py >= 500))
     {
-        canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
         document.getElementById("heading").style.color = "red";
         document.getElementById("myCanvas").style.borderColor = "red";
+        canvas.remove(person_obj);
     }
 
     if (keypressed == 37)
@@ -96,7 +98,7 @@ function left()
         canvas.remove(person_obj);
         person(player);
     } 
-    if ((px == 1020)&&(py == 500))
+    if (px >= 1020 && py >= 500)
     {
         canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
@@ -113,7 +115,7 @@ function right()
         canvas.remove(person_obj);
         person(player);
     }
-    if ((px == 1020)&&(py == 500))
+    if ((px >= 1020)&&(py >= 500))
     {
         canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
@@ -130,7 +132,7 @@ function up()
         canvas.remove(person_obj);
         person(player);
     }
-    if ((px == 1020)&&(py == 500))
+    if (px >= 1020 && py >= 500)
     {
         canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
@@ -147,7 +149,7 @@ function down()
         canvas.remove(person_obj);
         person(player);
     }
-    if ((px == 1020)&&(py == 500))
+    if ((px >= 1020)&&(py >= 500))
     {
         canvas.remove(person_obj);
         document.getElementById("heading").innerHTML = "You Reached Home!!!!!";
@@ -163,6 +165,7 @@ function creset()
     document.getElementById("xv").innerHTML = "";
     document.getElementById("yv").innerHTML = "";
     document.getElementById("btn_div").style.display = "inline";
+    canvas.remove(person_obj);
     
     document.getElementById("heading").innerHTML = "Reach Home";
     document.getElementById("heading").style.borderColor = "";
